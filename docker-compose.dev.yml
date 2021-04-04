@@ -1,0 +1,22 @@
+version: '3'
+services:
+  selenium:
+    restart: always
+    image: "selenium/standalone-chrome-debug"
+    ports:
+      - 4444:4444
+      - 5900:5900
+    volumes:
+      - /dev/shm:/dev/shm
+  app:
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+    depends_on:
+      - selenium
+    volumes:
+      - .:/var/www/
+    network_mode: "host"
+    environment:
+      - SCREEN_WIDTH
+      - SCREEN_HEIGHT
