@@ -31,6 +31,7 @@ and connect to localhost to watch the tests (on Mac ScreenSharing e.g. )
 Docker starts by default with ports
 - 4444:4444
 - 5900:5900
+
 It can be simply changed in docker-compose.dev.yml and docker-compose.yml files
 
 The project can be run in the local environment. See Environment variables line 127.
@@ -135,4 +136,5 @@ run however most have sensible defaults
 Environment variables:
 - TARGET target browser for testing, see utilities/browserCapabilites.py for available browsers and OS. 
 Use the default value 'local' to run against a locally available Chromedriver (in localhost, Docker, Openshift, etc)
+
 Default: docker
