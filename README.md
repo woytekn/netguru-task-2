@@ -40,14 +40,21 @@ If this is the first time you want to run the tests make sure you create a .env 
 .env.dist and .env files are included in the project. If for some reason they are not please add them under the project with following lines:
 
 .env.dist
+
 E2E_URL='https://'
+
 SCREEN_WIDTH=1350
+
 SCREEN_HEIGHT=950
 
 .env
+
 E2E_URL=''
+
 TARGET = docker
+
 SCREEN_WIDTH=1350
+
 SCREEN_HEIGHT=950
 
 To run tests with docker use this command
